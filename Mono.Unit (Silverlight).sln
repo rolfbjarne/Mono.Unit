@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Unit (Silverlight)", "Mono.Unit (Silverlight).csproj", "{16B74A14-2A0E-40D4-8A8C-342593CCA147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitLite (Silverlight)", "..\NUnitLite\Projects\NUnitLite (Silverlight).csproj", "{4BBE9F64-609B-4AB0-958C-136898CD4406}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Silverlight|Any CPU = Silverlight|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16B74A14-2A0E-40D4-8A8C-342593CCA147}.Silverlight|Any CPU.ActiveCfg = Silverlight|Any CPU
+		{16B74A14-2A0E-40D4-8A8C-342593CCA147}.Silverlight|Any CPU.Build.0 = Silverlight|Any CPU
+		{4BBE9F64-609B-4AB0-958C-136898CD4406}.Silverlight|Any CPU.ActiveCfg = Silverlight|Any CPU
+		{4BBE9F64-609B-4AB0-958C-136898CD4406}.Silverlight|Any CPU.Build.0 = Silverlight|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Mono.Unit (Silverlight).csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

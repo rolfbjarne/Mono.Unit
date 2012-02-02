@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">NET_4_0</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F10B7887-284C-4FA6-A654-0C8F5C9CB9DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mono.Unit</RootNamespace>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyName>Mono.Unit</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NET_4_0|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NET_4_0</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AssemblyInfo.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\AsyncTestLoader.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\AsyncTestRunner.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\BeginInvokeHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConditionalHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConsoleListener.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConsoleRunner.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\InvokeHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\MonoTestListener.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\Options.cs" />
+    <Compile Include="Source\Mono.Unit.Framework\AsynchronousAttribute.cs" />
+    <Compile Include="Source\Mono.Unit.Framework\TestFixtureBase.cs" />
+    <Compile Include="Source\Mono.Unit\AsyncTestCase.cs" />
+    <Compile Include="Source\Mono.Unit\AsyncTestFixture.cs" />
+    <Compile Include="Source\Mono.Unit\AsyncTestSuite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NUnitLite\Projects\NUnitLite %284.0%29.csproj">
+      <Project>{C24A3FC4-2541-4E9C-BADD-564777610B75}</Project>
+      <Name>NUnitLite (4.0)</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

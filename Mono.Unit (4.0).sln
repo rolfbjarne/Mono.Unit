@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Unit (4.0)", "Mono.Unit (4.0).csproj", "{F10B7887-284C-4FA6-A654-0C8F5C9CB9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitLite (4.0)", "..\NUnitLite\Projects\NUnitLite (4.0).csproj", "{C24A3FC4-2541-4E9C-BADD-564777610B75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		NET_4_0|Any CPU = NET_4_0|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C24A3FC4-2541-4E9C-BADD-564777610B75}.NET_4_0|Any CPU.ActiveCfg = NET_4_0|Any CPU
+		{C24A3FC4-2541-4E9C-BADD-564777610B75}.NET_4_0|Any CPU.Build.0 = NET_4_0|Any CPU
+		{F10B7887-284C-4FA6-A654-0C8F5C9CB9DB}.NET_4_0|Any CPU.ActiveCfg = NET_4_0|Any CPU
+		{F10B7887-284C-4FA6-A654-0C8F5C9CB9DB}.NET_4_0|Any CPU.Build.0 = NET_4_0|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Mono.Unit (4.0).csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

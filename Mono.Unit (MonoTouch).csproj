@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">MonoTouch</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{025B42E7-01B1-4F12-8E24-BE55B2CB3CA0}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mono.Unit.MT</RootNamespace>
+    <AssemblyName>Mono.Unit</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoTouch|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\MonoTouch</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>MONOTOUCH;MOBILE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.NUnitLite" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Source\Mono.Unit\AsyncTestCase.cs" />
+    <Compile Include="Source\Mono.Unit\AsyncTestFixture.cs" />
+    <Compile Include="Source\Mono.Unit\AsyncTestSuite.cs" />
+    <Compile Include="Source\Mono.Unit.Framework\AsynchronousAttribute.cs" />
+    <Compile Include="Source\Mono.Unit.Framework\TestFixtureBase.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\AsyncTestLoader.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\AsyncTestRunner.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\BeginInvokeHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConditionalHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConsoleListener.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\ConsoleRunner.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\InvokeHandler.cs" />
+    <Compile Include="Source\Mono.Unit.Framework.Runner\MonoTestListener.cs" />
+    <Compile Include="Source\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+# ensure LF endings on all checkouts
+configure.in crlf=input
+
+# ensure native line endings on checkout
+*.c	crlf
+*.h	crlf
+*.cs	crlf
+*.sh	crlf
+*.il	crlf
+
+.gitattributes	crlf
+ChangeLog	crlf
+*akefile*	crlf
+*.sources	crlf
+
+# don't do anything to line-endings.  Let CRLFs go into the repo, and CRLF on checkout
+*.bat	  	-crlf
+*.cmd	  	-crlf
+*.sln		-crlf
+*.*proj* 	-crlf
+*.xml 		-crlf

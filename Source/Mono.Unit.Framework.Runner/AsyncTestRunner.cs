@@ -20,7 +20,7 @@ using NUnitLite.Runner;
 namespace Mono.Unit.Framework.Runner {
 	public class AsyncTestRunner : TestRunner {
 		bool quit;
-		SortedList<DateTime, InvokeData> callbacks = new SortedList<DateTime, InvokeData> ();
+		List<InvokeData> callbacks = new List<InvokeData> ();
 		AutoResetEvent callback_event = new AutoResetEvent (false);
 		TestListener listener;
 		
@@ -71,7 +71,17 @@ namespace Mono.Unit.Framework.Runner {
 		{
 			DateTime dt = DateTime.UtcNow.Add (interval);
 			lock (callbacks) {
-				callbacks.Add (dt, new InvokeData () { Action = action, Time = dt });
+				bool inserted = false;
+				var data = new InvokeData () { Action = action, Time = dt };
+				for (int i = 0; i < callbacks.Count; i++) {
+					if (dt > callbacks [i].Time) {
+						callbacks.Insert (i, data);
+						inserted = true;
+						break;
+					}
+				}
+				if (!inserted)
+					callbacks.Add (data);
 				callback_event.Set ();
 			}
 		}
@@ -95,10 +105,10 @@ namespace Mono.Unit.Framework.Runner {
 					lock (callbacks) {
 						if (callbacks.Count == 0)
 							continue;
-						data = callbacks.Values [0];
+						data = callbacks [callbacks.Count - 1];
 						timeout = data.Time - DateTime.UtcNow;
 						if (timeout.Ticks <= 0) {
-							callbacks.RemoveAt (0);
+							callbacks.RemoveAt (callbacks.Count - 1);
 							more = callbacks.Count > 0;
 						} else {
 							break;
